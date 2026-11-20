@@ -1,0 +1,23 @@
+Te recomiendo quitar la / de cierre en elementos como meta e img:
+
+como lo tenes: 
+<img src="img/perfil.jpg" alt="Icono de persona" />
+como te sugiero dejarlo
+<img src="img/perfil.jpg" alt="Icono de persona">
+
+como lo tenes: 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+como te sugiero dejarlo
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+como lo tenes: 
+<meta charset="UTF-8" />
+como te sugiero dejarlo:
+<meta charset="UTF-8">
+
+Te recomiendo hacer el formulario
+
+te recomiendo cambiar como poner el borde en la tabla ya que como lo pusiste esta defasada
+<table border="1">
+
+<table style="border:1px solid black">
