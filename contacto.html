@@ -3,18 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacto</title>
+    <title>Contacto | Josué Daniel Turcios Galdámez</title>
+    <meta name="description" content="Contacta a Josué Daniel Turcios Galdámez desde Santa Ana, El Salvador: envía tu consulta, propuesta de proyecto u oferta de empleo." />
   </head>
 
   <body>
     <!-- "Header" con Mi nombre completo -->
     <header>
       <h1>Josué Daniel Turcios Galdámez</h1>
-      <nav>
+      <nav aria-label="Menú principal">
         <ul>
           <li><a href="index.html">Inicio</a></li>
           <li><a href="proyectos.html">Proyectos</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="contacto.html" aria-current="page">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -27,9 +28,54 @@
           <a href="mailto:josuedanielturciosg@gmail.com">Correo electrónico</a>
         </li>
         <li>
-          <a href="https://github.com/72dxmxnn" target="_blank">Perfil de GitHub</a>
+          <a href="https://github.com/72dxmxnn" target="_blank" rel="noopener noreferrer"> Perfil de GitHub</a>
         </li>
       </ul>
+
+      <h3>Formulario de contacto</h3>
+      <p>Los campos que están marcados con * son obligatorios.</p>
+
+      <form action="https://formspree.io/f/xvkabgrp" method="post">
+        <!-- Marco 1: datos de la persona -->
+        <fieldset>
+          <legend>Datos de contacto</legend>
+          <div>
+            <label for="nombre">Nombre completo: *</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required />
+          </div>
+          <div>
+            <label for="correo">Correo electrónico: *</label>
+            <input type="email" id="correo" name="correo" placeholder="nombre@correo.com" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="1234-5678" autocomplete="tel" />
+          </div>
+        </fieldset>
+
+        <!-- Marco 2: el mensaje -->
+        <fieldset>
+          <legend>Tu mensaje</legend>
+          <div>
+            <label for="asunto">Asunto:</label>
+            <select id="asunto" name="asunto">
+              <option value="empleo">Oferta de empleo</option>
+              <option value="proyecto">Propuesta de proyecto</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje: *</label>
+            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          </div>
+          <div>
+            <input type="checkbox" id="acepto" name="acepto" required />
+            <label for="acepto">Acepto que me contacten *</label>
+          </div>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+      </form>
     </main>
 
     <!-- "Footer" con información de copyright -->
